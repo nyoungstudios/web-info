@@ -1,0 +1,24 @@
+{
+  "name": "Web Info",
+  "version": "1.0",
+  "description": "Saves web info to a JSON file.",
+  "author": "Nathaniel Young",
+  "manifest_version": 2,
+  "content_scripts": [
+    {
+      "matches": ["https://www.bestbuy.com/*"],
+      "js": ["contentScripts.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {},
+  "permissions": [
+    "activeTab",
+    "webNavigation",
+    "webRequest",
+    "storage",
+    "downloads"
+  ]
+}
